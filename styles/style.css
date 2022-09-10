@@ -39,6 +39,41 @@ body {
     }
 }
 
+@keyframes buttonOnHover {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-3px);
+        box-shadow: 0px 7px 20px -10px #77ffc0b9;
+    }
+
+}
+
+@keyframes buttonOutHover {
+
+    0% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(0);
+        box-shadow: 0px 10px 20px -12px #77ffc0
+    }
+}
+
+@keyframes buttonOnClick {
+    0% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(-1.5px);
+        box-shadow: 0px 10px 26px -15px #77ffc0c5
+    }
+}
+
 #login {
     display: flex;
     width: 100vw;
@@ -46,6 +81,10 @@ body {
 
     justify-content: center;
     align-items: center;
+}
+
+#login__right-side {
+    width: 32vw;
 }
 
 #login__left-side {
@@ -65,6 +104,9 @@ body {
     margin-bottom: 3px;
 
     animation: moveInBottom 2.5s 1.6s ease-out backwards;
+    cursor: default;
+
+    text-shadow: -3px 4px 17px #030303ea;
 }
 
 #login__left-side span {
@@ -87,29 +129,79 @@ body {
     align-items: flex-start;
     justify-content: center;
 
-    padding: 120px 75px;
+    padding: 120px 75px 80px 75px;
     border-radius: 20px;
     background-color: #222027;
+
+    box-shadow: 0px 10px 20px -9px #030303ea;
 }
 
 #login__card > h2 {
+    font-size: 28px;
     position: absolute;
     top: 12%;
     left: 50%;
 
     transform: translateX(-50%);
     color: #77ffc0;
-}
+    text-shadow: -3px 4px 17px #030303ea;
 
-#login__card > input {
-    margin-bottom: 30px;
+    cursor: default;
 }
 
 .login__label {
     color: #fff;
 }
 
-.login__button {
+.login__input {
+    padding: 11px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    border: none;
+
+    outline: none;
+    border-radius: 5px;
     width: 100%;
+}
+
+.login__button {
+    position: relative;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 7px;
+
+    
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+
+    color: #222027;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 2px;
+
+    z-index: 1;
+    box-shadow: 0px 10px 20px -12px #77ffc0
+}
+
+.login__button:hover {
+    animation: buttonOnHover 0.25s forwards;
+}
+
+.login__button:not(hover) {
+    animation: buttonOutHover 0.20s forwards;
+}
+
+.login__button:hover::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: translate(1.5, 1.2);
+}
+
+.login__button:active {
+    animation: buttonOnClick 0.16s forwards;
 }
 
