@@ -3,12 +3,13 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 body {
     font-family: 'Noto Sans', sans-serif;
     background-color: #1a1820;
+    box-sizing: border-box;
 }
 
 @keyframes moveInBottom {
@@ -61,8 +62,9 @@ body {
 #login__left-side > h1 {
     color: #77ffc0;
     font-weight: 900;
+    margin-bottom: 3px;
 
-    animation: moveInBottom 2.5s 2s ease-out backwards;
+    animation: moveInBottom 2.5s 1.6s ease-out backwards;
 }
 
 #login__left-side span {
@@ -71,8 +73,43 @@ body {
 
 
 #login__astronaut-cat {
-    width: 430px;
-    height: 430px;
+    width: 65vw;
+    height: 65vh;
 
     animation: appearing 2.5s ease-out;
 }
+
+#login__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 120px 75px;
+    border-radius: 20px;
+    background-color: #222027;
+}
+
+#login__card > h2 {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+
+    transform: translateX(-50%);
+    color: #77ffc0;
+}
+
+#login__card > input {
+    margin-bottom: 30px;
+}
+
+.login__label {
+    color: #fff;
+}
+
+.login__button {
+    width: 100%;
+}
+
