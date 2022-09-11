@@ -144,6 +144,7 @@ body {
     height: 65vh;
 
     animation: appearing 2.5s .4s ease-out backwards;
+    margin-bottom: 4px;
 }
 
 #login__card {
