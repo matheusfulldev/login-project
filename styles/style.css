@@ -140,7 +140,7 @@ body {
 
 
 #login__astronaut-cat {
-    width: 65vw;
+    max-width: 65vw;
     height: 65vh;
 
     animation: appearing 2.5s .4s ease-out backwards;
