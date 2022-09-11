@@ -215,5 +215,7 @@ body {
 
 .login__button:active {
     animation: buttonOnClick 0.16s forwards;
+    
 }
+
 
